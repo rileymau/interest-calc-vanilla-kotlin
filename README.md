@@ -29,7 +29,6 @@ cd interest-calc
 
 ### Run
 
-Run using the happy green arrow in IntelliJ
-(More to come)
+Run using the happy green arrow in IntelliJ by `fun main()`
 
 Thanks for trying out my compound interest app!
