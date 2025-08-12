@@ -1,5 +1,7 @@
 package main
 
+import kotlin.math.ln
+
 fun findPrincipal() {
     // Get user input for rate, time periods, and total interest paid
     val rate = (askInterestRate() as Number).toDouble()
@@ -19,6 +21,16 @@ fun findRate() {
 
 fun findTime() {
     // Get user input for principal, interest rate, and total interest paid
+    val principal = (askPrincipal() as Number).toDouble()
+    val rate = (askInterestRate() as Number).toDouble()
+    val totalInterest = (askTotalInterest() as Number).toDouble()
+
+    // Calculate time periods
+    val num = ln((totalInterest + principal) / principal)
+    val denom =ln(1 + (rate / 100))
+    val time = num / denom
+    print("The number of time periods for principal $principal with interest rate $rate paying total interest $totalInterest is: \n")
+    println(time)
 }
 
 fun findTotalInterest() {
@@ -33,9 +45,7 @@ fun findTotalInterest() {
     println(totalInterest)
 }
 
-
-
-// main runs the app and centralizes user input
+// main() runs the app and centralizes user input
 fun main() {
     println("Welcome to the Interest Calc!")
 
