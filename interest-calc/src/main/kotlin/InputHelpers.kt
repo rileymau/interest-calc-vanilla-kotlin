@@ -11,7 +11,7 @@ fun askPrincipal(): Any? {
 
 // askInterestRate gets the user input for interest rate and validates it
 fun askInterestRate(): Any? {
-    println("Enter the interest rate")
+    println("Enter the interest rate as a percentage")
     val interestRate = readLine()?.toDoubleOrNull() ?: run {
         println("Please enter a double, exiting.")
     }

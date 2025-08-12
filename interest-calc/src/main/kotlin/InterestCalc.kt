@@ -2,12 +2,14 @@ package main
 
 fun findPrincipal() {
     // Get user input for rate, time periods, and total interest paid
-    val rate = askInterestRate()
-    val time = askTimePeriods()
-    val totalInterest = askTotalInterest()
+    val rate = (askInterestRate() as Number).toDouble()
+    val time = (askTimePeriods() as Number).toDouble()
+    val totalInterest = (askTotalInterest() as Number).toDouble()
 
-    val principal = 1
-    print("The principal amount for rate $rate over $time periods paying $totalInterest is: ")
+    // Calculate the principal
+    val denom = 1 + Math.pow(1 + rate / 100, time)
+    val principal = totalInterest / denom
+    print("The principal amount for rate $rate over $time periods paying $totalInterest in interest is: \n")
     println(principal)
 }
 
