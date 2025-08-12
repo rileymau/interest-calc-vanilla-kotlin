@@ -8,7 +8,7 @@ The user can provide 3 out of those 4 items, and the app will calculate the miss
 
 This repository uses Kotlin and Gradle.  
 
-I used ChatGPT 4o while building this project.  
+I used ChatGPT 4o while building this project to help with Kotlin syntax.  The formulas I derived on my own.  
 
 ## Local setup
 
