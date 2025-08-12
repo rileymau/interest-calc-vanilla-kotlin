@@ -31,4 +31,6 @@ cd interest-calc
 
 Run using the happy green arrow in IntelliJ by `fun main()`
 
+More to come.  
+
 Thanks for trying out my compound interest app!
