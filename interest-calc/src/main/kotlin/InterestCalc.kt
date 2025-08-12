@@ -55,7 +55,8 @@ fun findTotalInterest() {
     val time = (askTimePeriods() as Number).toDouble()
 
     // Calculate the total interest paid
-    val totalInterest = principal * Math.pow(1 + rate / 100, time) - principal
+    val inside = (1 + rate / 100)
+    val totalInterest = principal * inside.pow(time) - principal
     print("The total interest paid for the rate $rate over $time periods with $principal principal is: \n")
     println(totalInterest)
 }
