@@ -2,7 +2,13 @@ package main
 
 fun findPrincipal() {
     // Get user input for rate, time periods, and total interest paid
+    val rate = askInterestRate()
+    val time = askTimePeriods()
+    val totalInterest = askTotalInterest()
 
+    val principal = 1
+    print("The principal amount for rate $rate over $time periods paying $totalInterest is: ")
+    println(principal)
 }
 
 fun findRate() {
