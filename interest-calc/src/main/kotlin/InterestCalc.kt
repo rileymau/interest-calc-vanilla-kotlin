@@ -7,7 +7,7 @@ fun findPrincipal() {
     val totalInterest = (askTotalInterest() as Number).toDouble()
 
     // Calculate the principal
-    val denom = 1 + Math.pow(1 + rate / 100, time)
+    val denom = (Math.pow(1 + (rate / 100), time)) - 1
     val principal = totalInterest / denom
     print("The principal amount for rate $rate over $time periods paying $totalInterest in interest is: \n")
     println(principal)
